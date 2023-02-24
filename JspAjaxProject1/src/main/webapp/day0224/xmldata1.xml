@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<board>
+	<data id = "angel" name = "김병훈">
+		<subject>Hello</subject>
+		<photo>../image/19.jpg</photo>
+	</data>
+	<data id = "aaa" name = "김종국">
+		<subject>nice</subject>
+		<photo>../image/a01.png</photo>
+	</data>
+	<data id = "abc" name = "이민지">
+		<subject>meet you</subject>
+		<photo>../image/a02.png</photo>
+	</data>
+	<data id = "ang" name = "이민정">
+		<subject>good</subject>
+		<photo>../image/a03.png</photo>
+	</data>
+	<data id = "gel" name = "김시원">
+		<subject>me too</subject>
+		<photo>../image/a04.png</photo>
+	</data>
+</board>
