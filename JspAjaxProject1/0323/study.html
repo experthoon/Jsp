@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+
+	$(function(){
+		
+	
+	$.ajax({
+		type:"post",
+		url: "../json/detail_img_encdoing_utf8.json",
+		dataType:"json",
+		success:function(data){
+			
+			$.each(data,function(i,elt){
+				if(elt.num=="3"){
+					$(".main_img").attr("src",elt.description_img);
+					$(".name").text(elt.item_name);
+					$(".context").text(elt.title);
+					
+					var cp= elt.check_point_img;
+					//console.log(cp);
+					var cpArr = cp.split(",");
+					console.log(cpArr);
+					for(var i =0; i<cpArr.length; i++){
+						$(".chkBox").append("<img src = '" + cpArr[i] +"'>");
+					}
+					
+					var cs = elt.tip_img;
+					var csArr = cs.split(",");
+					for(var i=0; i<csArr.length; i++){
+						$(".tip").html("<img src = '" + csArr[i] + "'>");
+					}
+				}
+				
+			});
+			}
+		});
+	});	
+	
+	
+	
+</script>
+</head>
+<body>
+	<div class="container">
+        <img src="" style="width: 300px;" class="main_img">
+        <span class="name"></span><br>
+        <hr><br><br>
+        <div class="context" style="margin-bottom: 20px;"></div>
+        <span><h3>check Point</h3></span>
+        <div class="chkBox"></div>
+        <div class="tip">
+        <span><h3>Tip</h3></span>
+        </div>
+    </div>
+</body>
+</html>
